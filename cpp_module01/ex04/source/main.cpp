@@ -16,10 +16,10 @@
 /*
 	Please feel free to use this textbox to do the testing:
 
-	./replace main.cpp Apple Yellow
+	./replace main.cpp word replaced_Word
 	diff main.cpp main.cpp.replace
 
-	Apple -> Turnip -> Apple
+	Apple -> Turnip -> Apple1 -> 1Apple1
 */
 
 int replace(char **argv, std::string str)
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 {
 	std::ifstream	infile;	// Input file stream object to read from files
 	std::string		str;	// String to store the contents of the file
-	char			c;		// Variable to store each character read from the file
+	std::string		line;
 
 	if (argc != 4)
 	{
@@ -83,9 +83,12 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	// Read the file character by character until the end of the file
-	while (!infile.eof() && infile >> std::noskipws >> c)
-		str += c;
+	// Read the contents of the file into str
+	while (std::getline(infile, line))
+	{
+		str += line;
+		str += '\n';
+	}
 
 	infile.close();
 

@@ -6,7 +6,7 @@
 #    By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/24 15:58:55 by dberehov          #+#    #+#              #
-#    Updated: 2024/09/24 16:00:29 by dberehov         ###   ########.fr        #
+#    Updated: 2024/09/24 16:38:03 by dberehov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ BGCYAN = \033[1:37;46m
 RC = \033[0m
 
 # Definitions
-NAME = sed
+NAME = replace
 SRC_DIR = source/
 OBJ_DIR = object/
 
@@ -55,7 +55,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
-		@echo "$(BGBLUE)         sed compiled        $(RC)"
+		@echo "$(BGBLUE)         replace compiled        $(RC)"
 
 $(OBJ_DIR):
 		@mkdir -p $@
