@@ -23,7 +23,7 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie(void)
 {
-	//cout << "Zombie " << this->_name << " has been destroyed" << endl;
+	cout << "Zombie " << this->_name << " has been destroyed" << endl;
 }
 
 
