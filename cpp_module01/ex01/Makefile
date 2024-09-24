@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/24 15:37:17 by dberehov          #+#    #+#              #
-#    Updated: 2024/09/24 15:47:04 by dberehov         ###   ########.fr        #
+#    Created: 2024/09/24 15:51:17 by dberehov          #+#    #+#              #
+#    Updated: 2024/09/24 15:51:43 by dberehov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,12 @@ BGCYAN = \033[1:37;46m
 RC = \033[0m
 
 # Definitions
-NAME = brainz
+NAME = horde
 SRC_DIR = source/
 OBJ_DIR = object/
 
 # Project Files
-SOURCE_FILES = main newZombie randomChump Zombie
+SOURCE_FILES = main zombieHorde Zombie
 #B_SRC_FILES =
 
 SOURCES			= $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SOURCE_FILES)))
@@ -55,7 +55,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
-		@echo "$(BGBLUE)         brainz compiled        $(RC)"
+		@echo "$(BGBLUE)         horde compiled        $(RC)"
 
 $(OBJ_DIR):
 		@mkdir -p $@

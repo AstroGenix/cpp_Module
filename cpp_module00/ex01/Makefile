@@ -21,42 +21,49 @@ BGPURPLE = \033[1:37;45m
 BGCYAN = \033[1:37;46m
 
 # Reset Colour
-NC = \033[0m
+RC = \033[0m
 
 # Definitions
 NAME = phonebook
-SRC_DIR = .\
-OBJ_DIR = object/
+SRC_DIR = sources/
+OBJ_DIR = objects/
 
 # Project Files
-
 SOURCE_FILES = phonebook contact
+#B_SRC_FILES =
 
-SOURCES = $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SOURCE_FILES)))
-OBJECTS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SOURCE_FILES)))
+SOURCES			= $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SOURCE_FILES)))
+OBJECTS			= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SOURCE_FILES)))
+#B_SRCS			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(B_SRC_FILES)))
+#B_OBJS			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(B_SRC_FILES)))
+OBJ_FILES		=	.cache_exists
 
 # Rules
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-		@$(CXX) $(OBJECTS) $(CFLAGS) -o $(NAME)
-		@echo "$(BGBLUE)         phonebook compiled.         $(NC)"
+		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
+		@echo "$(BGBLUE)         phonebook compiled        $(RC)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
-		@echo "$(BGREEN)       Compiling needed files        $(NC)"
-		@echo "$(GREEN) -> Compiled: $(NC)$<"
+$(OBJ_DIR):
+		@mkdir -p $@
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJ_DIR)
+#		@echo "$(BGREEN)       Compiling needed files        $(RC)"
+		@echo "$(GREEN) -> Compiled: $(RC) $<"
 		@$(CXX) $(CFLAGS) -c $< -o $@
 
 clean:
-	@echo "$(BGPURPLE)        Deleting object files.       $(NC)"
-	@echo "$(RED) -> Removed: $(NC)$(OBJECTS)$<"
+	@echo "$(RED) -> Removed: $(RC)$(OBJECTS)$<"
+	@rm -fr $(OBJ_DIR)
 	@rm -f $(OBJECTS)
+	@echo "$(BGPURPLE)        Object files deleted       $(RC)"
 
 
 fclean: clean
-	@echo "$(BGPURPLE)    Deleting phonebook executable.   $(NC)"
 	@rm -f $(NAME)
-	@echo "$(RED) -> Removed: $(NC)$(NAME)"
+	@echo "$(RED) -> Removed: $(RC)$(NAME)"
+	@echo "$(BGPURPLE)         Executable deleted        $(RC)"
 
 re: fclean all
 

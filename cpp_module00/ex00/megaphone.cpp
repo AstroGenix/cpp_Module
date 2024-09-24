@@ -1,8 +1,10 @@
-#include <iostream>
+#include <iostream> // C++ header for input/output operations, replaces stdio.h from C
 
+// Allows direct use of cout without std:: prefix
 using std::cout;
-using std::endl;
+using std::endl; 
 
+// std::string is a C++ standard library type for strings, not present in C
 std::string string_upper(std::string str)
 {
 	for (int i = 0; i < str.length(); i++)
@@ -21,4 +23,4 @@ int	main(int argc, char **argv)
 		cout << string_upper(argv[i]);
 	cout << endl;
 	return 0;
-}	
+}

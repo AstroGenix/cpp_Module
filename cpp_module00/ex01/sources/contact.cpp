@@ -15,11 +15,11 @@ int	Contact::set_first_name(std::string first_name)
 {
 	if (first_name.empty())
 		return (1);
-	for (int i = 0; i < first_name.size(); i++)
+	for (std::string::size_type i = 0; i < first_name.size(); i++)
 	{
 		if (!isalpha(first_name[i]))
 		{
-			if (isspace(first_name[i]))
+			if (!isspace(first_name[i]))
 				continue;
 			else
 				return 1;
@@ -38,11 +38,11 @@ int	Contact::set_last_name(std::string last_name)
 {
 	if (last_name.empty())
 		return (1);
-	for (int i = 0; i < last_name.size(); i++)
+	for (std::string::size_type i = 0; i < last_name.size(); i++)
 	{
 		if (!isalpha(last_name[i]))
 		{
-			if (isspace(last_name[i]))
+			if (!isspace(last_name[i]))
 				continue;
 			else
 				return 1;
@@ -61,7 +61,7 @@ int	Contact::set_nickname(std::string nickname)
 {
 	if (nickname.empty())
 		return (1);
-	for (int i = 0; i < nickname.size(); i++)
+	for (std::string::size_type i = 0; i < nickname.size(); i++)
 	{
 		if (!isalpha(nickname[i]))
 		{
@@ -84,7 +84,7 @@ int Contact::set_phone_number(std::string phone_number)
 {
 	if (phone_number.empty())
 		return (1);
-	for (int i = 0; i < phone_number.size(); i++)
+	for (std::string::size_type i = 0; i < phone_number.size(); i++)
 	{
 		if (!isdigit(phone_number[i]))
 			return 1;
