@@ -51,6 +51,7 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
+	// Declare an array of member function pointers 'ptr_level'.
 	void (Harl:: *ptr_level[]) (void) = {
 		ptr_level[0] = &Harl::debug,
 		ptr_level[1] = &Harl::info,
@@ -63,6 +64,7 @@ void Harl::complain(std::string level)
 	{
 		if (levels[i] == level)
 		{
+			// ex: (this->*ptr_level[0])() is equivalent to this->debug()
 			(this->*ptr_level[i])();
 			break;
 		}

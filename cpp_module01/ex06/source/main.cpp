@@ -24,13 +24,10 @@ int main(int argc, char **argv)
 		{
 		case 0:
 			h.complain("DEBUG");
-			break ;
 		case 1:
 			h.complain("INFO");
-			break ;
 		case 2:
 			h.complain("WARNING");
-			break ;
 		case 3:
 			h.complain("ERROR");
 			break ;
