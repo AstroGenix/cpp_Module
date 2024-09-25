@@ -36,12 +36,12 @@ BGCYAN = \033[1:37;46m
 RC = \033[0m
 
 # Definitions
-NAME = ????
+NAME = fixed00
 SRC_DIR = source/
 OBJ_DIR = object/
 
 # Project Files
-SOURCE_FILES = ???
+SOURCE_FILES = main Fixed
 #B_SRC_FILES =
 
 SOURCES			= $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SOURCE_FILES)))
@@ -55,7 +55,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
-		@echo "$(BGBLUE)         ???? compiled        $(RC)"
+		@echo "$(BGBLUE)         ./fixed00 compiled        $(RC)"
 
 $(OBJ_DIR):
 		@mkdir -p $@
