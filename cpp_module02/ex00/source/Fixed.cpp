@@ -41,7 +41,7 @@ Fixed::~Fixed(void)
 
 int Fixed::getRawBits(void) const
 {
-	cout << "'getRawBits' member function called" << endl;
+	//cout << "'getRawBits' member function called" << endl;
 	return (this->_fixedPointNum);
 }
 
