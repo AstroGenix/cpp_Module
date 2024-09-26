@@ -54,7 +54,7 @@ FragTrap& FragTrap::operator=(const FragTrap& copy)
 }
 
 // Member functions
-void FragTrap::highFiveGuys(void)
+void FragTrap::highFivesGuys(void)
 {
 	if (this->_health <= 0)
 	{
