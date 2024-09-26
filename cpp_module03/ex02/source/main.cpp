@@ -13,9 +13,9 @@
 #include "../include/FragTrap.hpp"
 
 /*
-	   [ClapTrap]           <-- Main Class
-		/	   \
-	   /		\
+ [ClapTrap]   [ClapTrap]           <-- Main Class
+     |            |
+	 |		      |
  [ScavTrap]   [FragTrap]    <-- Derived Classes
 */
 
