@@ -33,6 +33,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 
 		// Member functions
 		void whoAmI(void);
+		using ScavTrap::attack;
 };
 
 #endif

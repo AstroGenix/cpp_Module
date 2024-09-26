@@ -59,5 +59,5 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& copy)
 // Member function
 void DiamondTrap::whoAmI(void)
 {
-    std::cout << "DiamondTrap name: " << this->_name << ", ClapTrap name: " << ClapTrap::_name << std::endl;
+    std::cout << "DiamondTrap name: \033[1;37m" << this->_name << "\033[0m, ClapTrap name: \033[1;37m" << ClapTrap::_name << "\033[0m" << std::endl;
 }
