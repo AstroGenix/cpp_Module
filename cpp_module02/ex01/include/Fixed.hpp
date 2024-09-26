@@ -14,7 +14,6 @@
 # define FIXED_HPP
 
 #include <iostream>
-#include <cmath>
 
 class Fixed
 {
@@ -28,14 +27,14 @@ class Fixed
 		Fixed &operator=(const Fixed &copy);	// Copy assignment operator
 		~Fixed(void);							// Destructor
 
-		Fixed(int const val);
-		Fixed(float const val);
+		Fixed(int const val);					// Constructor from integer
+		Fixed(float const val);					// Constructor from float
 
 		int		getRawBits(void) const;		// Returns the raw fixed-point value
 		void	setRawBits(int const raw);	// Sets the raw fixed-point value
 
-		int		toInt(void) const;
-		float	toFloat(void) const;
+		int		toInt(void) const;			// Converts fixed-point to integer
+		float	toFloat(void) const;		// Converts fixed-point to float
 };
 // Custom rounding function
 int customRound(float value);
