@@ -10,53 +10,51 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ClapTrap.hpp"
+#include "../include/ScavTrap.hpp"
+
+/*
+Construction Order
+	Base Class Construction: When you create an instance of a derived class (ScavTrap),
+		the constructor of the base class (ClapTrap) is called first. This ensures that
+		the base part of the object is properly initialized before the derived part.
+	Derived Class Construction: After the base class constructor completes,
+		the constructor of the derived class (ScavTrap) is called to initialize
+		the derived part of the object.
+
+Destruction Order
+	Destruction happens in the reverse order of construction:
+
+	Derived Class Destruction: When an object is destroyed, the destructor of the derived
+		class (ScavTrap) is called first. This ensures that any resources allocated by
+		the derived class are released before the base class destructor is called.
+	Base Class Destruction: After the derived class destructor completes, the destructor
+		of the base class (ClapTrap) is called to clean up the base part of the object.
+*/
 
 int main()
 {
-	// Creating ClapTrap objects
-	ClapTrap Clappy("Clappy");
-	ClapTrap Trappy("Trappy");
+	// Demonstrate default constructor
+    std::cout << "\033[1;34mCreating ScavTrap scav1 with default constructor\033[0m" << std::endl;
+    ScavTrap scav1;
+    scav1.attack("target1");
+    scav1.guardGate();
+    std::cout << std::endl;
 
-	// Display initial states
-	std::cout << "\nInitial States:" << std::endl;
-	Clappy.attack("target1");
-	Trappy.attack("target2");
+    // Demonstrate parameterized constructor
+    std::cout << "\033[1;34mCreating ScavTrap scav2 with parameterized constructor\033[0m" << std::endl;
+    ScavTrap scav2("Scavvy");
+    scav2.attack("target2");
+    scav2.guardGate();
+    std::cout << std::endl;
 
-	// Test attacking
-	std::cout << "\nTesting Attacks:" << std::endl;
-	Clappy.attack("Trappy");
-	Trappy.attack("Clappy");
+    // Demonstrate another instance with parameterized constructor
+    std::cout << "\033[1;34mCreating ScavTrap scav3 with parameterized constructor\033[0m" << std::endl;
+    ScavTrap scav3("Guardian");
+    scav3.attack("target3");
+    scav3.guardGate();
+    std::cout << std::endl;
 
-	// Test taking damage
-	std::cout << "\nTesting Taking Damage:" << std::endl;
-	Clappy.takeDamage(5);
-	Trappy.takeDamage(15);
-
-	// Test repairing
-	std::cout << "\nTesting Repairs:" << std::endl;
-	Clappy.beRepaired(10);
-	Trappy.beRepaired(5);
-
-	// Test attacking with insufficient energy
-	std::cout << "\nTesting Attacks with Insufficient Energy:" << std::endl;
-	for (int i = 0; i < 10; ++i)
-	{
-		Clappy.attack("Trappy");
-	}
-
-	// Test repairing with insufficient energy
-	std::cout << "\nTesting Repairs with Insufficient Energy:" << std::endl;
-	for (int i = 0; i < 10; ++i)
-	{
-		Trappy.beRepaired(5);
-	}
-
-	// Test taking damage until health is zero
-	std::cout << "\nTesting Taking Damage Until Health is Zero:" << std::endl;
-	Clappy.takeDamage(100);
-	Clappy.attack("Trappy");
-	Clappy.beRepaired(10);
-
-	return 0;
+    // Demonstrate destruction order
+    std::cout << "\033[1;34mEnd of main, destructors will be called in reverse order of construction\033[0m" << std::endl;
+    return 0;
 }

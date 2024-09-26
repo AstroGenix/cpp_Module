@@ -36,7 +36,7 @@ BGCYAN = \033[1:37;46m
 RC = \033[0m
 
 # Definitions
-NAME = claptrap01
+NAME = scavtrap
 SRC_DIR = source/
 OBJ_DIR = object/
 
@@ -55,7 +55,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
-		@echo "$(BGBLUE)         claptrap01 compiled        $(RC)"
+		@echo "$(BGBLUE)         scavtrap compiled        $(RC)"
 
 $(OBJ_DIR):
 		@mkdir -p $@
