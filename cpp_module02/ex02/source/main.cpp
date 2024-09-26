@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:32:28 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/24 18:32:29 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/26 13:15:30 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ int main( void ) {
 	// Increment and decrement operators
 	Fixed i;
 	std::cout << "Initial i: " << i << std::endl;
-	std::cout << "Prefix increment ++i: " << ++i << std::endl;
-	std::cout << "Postfix increment i++: " << i++ << std::endl;
-	std::cout << "After postfix increment i: " << i << std::endl;
-	std::cout << "Prefix decrement --i: " << --i << std::endl;
-	std::cout << "Postfix decrement i--: " << i-- << std::endl;
-	std::cout << "After postfix decrement i: " << i << std::endl;
+	std::cout << "Prefix increment        ++i: " << ++i << std::endl;
+	std::cout << "Postfix increment       i++: " << i++ << std::endl;
+	std::cout << "After postfix increment   i: " << i << std::endl;
+	std::cout << "Prefix decrement        --i: " << --i << std::endl;
+	std::cout << "Postfix decrement       i--: " << i-- << std::endl;
+	std::cout << "After postfix decrement   i: " << i << std::endl;
 
 	std::cout <<  std::endl;
 
