@@ -33,7 +33,7 @@ ClapTrap::ClapTrap(const ClapTrap& copy) : _name(copy._name), _health(copy._heal
 // Destructor
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "\033[1;31mClapTrap { " << this->_name << " } called\033[0m" << std::endl;
+	std::cout << "\033[1;31mClapTrap destructor { " << this->_name << " } called\033[0m" << std::endl;
 }
 
 // Assignment operator

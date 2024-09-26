@@ -58,10 +58,10 @@ void ScavTrap::guardGate(void)
 {
 	if (this->_health <= 0)
 	{
-		std::cout << "ScavTrap \033[1;37m" << _name << "\033[0m cannot enter 'Gate keeper mode' because it has no hit points left." << std::endl;
+		std::cout << "ClapTrap \033[1;37m" << _name << "\033[0m cannot enter 'Gate keeper mode' because it has no hit points left." << std::endl;
 	}
 
-	std::cout << "ScavTrap \033[1;37m" << _name << "\033[0m has entered 'Gate keeper mode'." << std::endl;
+	std::cout << "ClapTrap \033[1;37m" << _name << "\033[0m has entered 'Gate keeper mode'." << std::endl;
 }
 
 // Override attack method
