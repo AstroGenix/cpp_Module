@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:18:23 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 16:35:58 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 17:21:21 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
 		basic.getIdea();
 
 		{
-			Cat tmp(basic);
+			Cat tmp = basic;
 			std::cout << "Tmp Cat's ideas after copy:" << std::endl;
 			tmp.getIdea();
 		}
