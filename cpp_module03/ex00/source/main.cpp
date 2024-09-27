@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 13:29:13 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/26 13:29:13 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 11:35:32 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,8 @@ int main()
 	Clappy.attack("target1");
 	Trappy.attack("target2");
 
-	// Test attacking
-	std::cout << "\n\033[1;34mTesting Taking Damage:\033[0m" << std::endl;
-	Clappy.attack("Trappy");
-	Trappy.attack("Clappy");
-
 	// Test taking damage
-	std::cout << "\nTesting Taking Damage:" << std::endl;
+	std::cout << "\n\033[1;34mTesting Taking Damage:\033[0m" << std::endl;
 	Clappy.takeDamage(5);
 	Trappy.takeDamage(15);
 

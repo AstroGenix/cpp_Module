@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 13:29:10 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/26 13:29:10 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 11:34:24 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void ClapTrap::takeDamage(unsigned int ammount)
 	}
 
 	std::cout << "ClapTrap \033[1;37m" << _name << "\033[0m takes \033[1;37m" << ammount << "\033[0m points of damage! "
-			  << "Remaining health: \033[1;37m" << _health << "/10\033[0m." << std::endl;
+			  << "Remaining health: \033[1;37m" << _health << "\033[0m." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -105,5 +105,5 @@ void ClapTrap::beRepaired(unsigned int amount)
 	_energy -= 1;
 	_health += amount;
 	std::cout << "ClapTrap \033[1;37m" << _name << "\033[0m is repaired by \033[1;37m" << amount << "\033[0m points! "
-			  << "New health: \033[1;37m" << _health << "/10\033[0m." << std::endl;
+			  << "New health: \033[1;37m" << _health << "\033[0m." << std::endl;
 }
