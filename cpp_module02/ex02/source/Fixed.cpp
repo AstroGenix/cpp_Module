@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:32:03 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/24 18:32:04 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 10:54:07 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ Fixed Fixed::operator/(const Fixed &copy) const
 
 bool Fixed::operator==(const Fixed &copy) const
 {
-	return (this->toFloat() / copy.toFloat());
+	return (this->toFloat() == copy.toFloat());
 }
 
 bool Fixed::operator!=(const Fixed &copy) const
