@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 22:16:39 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 13:42:01 by dberehov         ###   ########.fr       */
+/*   Created: 2024/09/27 12:25:38 by dberehov          #+#    #+#             */
+/*   Updated: 2024/09/27 12:32:38 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "../include/Brain.hpp"
 
-#include "Animal.hpp"
-#include "Brain.hpp"
-
-class Cat : public Animal
+Brain::Brain(void)
 {
-	private:
-		Brain *_brain;
-	public:
-		// Constructor & Desctructor
-		Cat(void);
-		Cat(const std::string& type);
-		Cat(const Cat& copy);
-		~Cat(void);
-
-		// Operator
-		Cat& operator=(const Cat& copy);
-
-		// Member Functions
-		void	makeSound(void) const;
-		
-};
-
-#endif
+    std::cout << "\033[1;32mBrain constructor  called\033[0m" << std::endl;
+}

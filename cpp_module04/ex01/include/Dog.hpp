@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 23:15:37 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/26 23:15:37 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:20:35 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
+	private:
+		Brain *_brain;
 	public:
 		// Constructor & Desctructor
 		Dog(void);

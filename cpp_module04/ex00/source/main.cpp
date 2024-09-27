@@ -6,13 +6,13 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:18:23 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/26 22:18:23 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 13:34:51 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#include "../include/Cat.hpp"
+#include "../include/Dog.hpp"
+#include "../include/WrongCat.hpp"
 
 int main()
 {
@@ -63,7 +63,7 @@ int main()
 	// Test 3: WrongAnimal polymorphism
 	std::cout << "\n\033[1;34mTest 3: WrongAnimal polymorphism\033[0m" << std::endl;
 	WrongAnimal* wrongAnimals[2];
-	wrongAnimals[0] = new WrongCat();
+	wrongAnimals[0] = new WrongCat();    // If Wronganimal had virtual output would be "Cat 🐈: Wrong Meow!"
 	wrongAnimals[1] = new WrongAnimal();
 
 	for (int i = 0; i < 2; ++i) {
