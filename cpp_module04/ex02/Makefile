@@ -6,7 +6,7 @@
 #    By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 13:29:50 by dberehov          #+#    #+#              #
-#    Updated: 2024/09/27 16:38:45 by dberehov         ###   ########.fr        #
+#    Updated: 2024/09/27 16:38:55 by dberehov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ BGCYAN = \033[1:37;46m
 RC = \033[0m
 
 # Definitions
-NAME = brain
+NAME = abstract
 SRC_DIR = source/
 OBJ_DIR = object/
 
@@ -55,7 +55,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 		@$(CXX) $(CFLAGS) $(OBJECTS) -o $(NAME)
-		@echo "$(BGBLUE)         brain compiled        $(RC)"
+		@echo "$(BGBLUE)         abstract compiled        $(RC)"
 
 $(OBJ_DIR):
 		@mkdir -p $@

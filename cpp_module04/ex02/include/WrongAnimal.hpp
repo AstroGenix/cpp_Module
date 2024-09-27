@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 22:16:39 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 15:50:34 by dberehov         ###   ########.fr       */
+/*   Created: 2024/09/26 22:17:13 by dberehov          #+#    #+#             */
+/*   Updated: 2024/09/26 22:17:13 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
 
-class Cat : public Animal
+// Base Class
+class WrongAnimal
 {
-	private:
-		Brain *_brain;
+	protected:
+		std::string _type;
+
 	public:
 		// Constructor & Desctructor
-		Cat(void);
-		Cat(const std::string& type);
-		Cat(const Cat& copy);
-		~Cat(void);
+		WrongAnimal(void);
+		WrongAnimal(const std::string& type);
+		WrongAnimal(const WrongAnimal& copy);
+		virtual ~WrongAnimal(void);
 
 		// Operator
-		Cat& operator=(const Cat& copy);
+		WrongAnimal& operator=(const WrongAnimal& copy);
 
 		// Member Functions
-		void	makeSound(void) const;
-		void	getIdea(void) const;
-		void	setIdea(int index, std::string idea);
+		void    makeSound(void) const;  // Not virtual
 };
 
 #endif
