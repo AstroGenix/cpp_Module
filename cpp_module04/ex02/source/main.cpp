@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:18:23 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 16:35:58 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:50:59 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int main()
 	{
 		// Main Subject
 		std::cout << "\033[1;34mMain Subject\033[0m" << std::endl;
-		const Animal* jdog = new Dog();
-		const Animal* icat = new Cat();
+		const AAnimal* jdog = new Dog();
+		const AAnimal* icat = new Cat();
 	
 		delete jdog; //should not create a leak
 		delete icat;

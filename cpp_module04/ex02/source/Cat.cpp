@@ -6,26 +6,26 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:18:42 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 16:01:11 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:48:00 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Cat.hpp"
 
 // Default constructor
-Cat::Cat(void) : Animal("Cat"), _brain(new Brain())
+Cat::Cat(void) : AAnimal("Cat"), _brain(new Brain())
 {
 	std::cout << "\033[1;32mCat constructor { " << this->_type << " } called\033[0m" << std::endl;
 }
 
 // Parameterized constructor
-Cat::Cat(const std::string& type) : Animal(type), _brain(new Brain())
+Cat::Cat(const std::string& type) : AAnimal(type), _brain(new Brain())
 {
 	std::cout << "\033[1;32mCat parameterized constructor { " << this->_type << " } called\033[0m" << std::endl;
 }
 
 // Copy constructor
-Cat::Cat(const Cat& copy) : Animal(copy), _brain(new Brain(*copy._brain))
+Cat::Cat(const Cat& copy) : AAnimal(copy), _brain(new Brain(*copy._brain))
 {
 	std::cout << "\033[1;32mCat copy constructor { " << this->_type << " } called\033[0m" << std::endl;
 }
@@ -41,7 +41,7 @@ Cat::~Cat(void)
 Cat& Cat::operator=(const Cat& copy)
 {
 	if (this != &copy) {
-		Animal::operator=(copy);
+		AAnimal::operator=(copy);
 		delete this->_brain;					// Deletes old _brain
 		this->_brain = new Brain(*copy._brain); // Creates deep copy
 	}

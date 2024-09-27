@@ -6,7 +6,7 @@
 /*   By: dberehov <dberehov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:16:29 by dberehov          #+#    #+#             */
-/*   Updated: 2024/09/27 15:31:43 by dberehov         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:46:34 by dberehov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@
 #include <iostream>
 
 // Base Class
-class Animal
+class AAnimal
 {
 	protected:
 		std::string _type;
 
 	public:
 		// Constructor & Desctructor
-		Animal(void);
-		Animal(const std::string& type);
-		Animal(const Animal& copy);
-		virtual ~Animal(void);			// Virtual Destructor
+		AAnimal(void);
+		AAnimal(const std::string& type);
+		AAnimal(const AAnimal& copy);
+		virtual ~AAnimal(void);			// Virtual Destructor
 
 		// Operator
-		Animal& operator=(const Animal& copy);
+		AAnimal& operator=(const AAnimal& copy);
 
 		// Member Functions
-		virtual void    makeSound(void) const;
+		virtual void    makeSound(void) const = 0;
 };
 
 #endif
